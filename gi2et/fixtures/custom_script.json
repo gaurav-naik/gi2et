@@ -1,0 +1,11 @@
+[
+ {
+  "docstatus": 0, 
+  "doctype": "Custom Script", 
+  "dt": "Project", 
+  "modified": "2016-05-13 10:25:56.143735", 
+  "name": "Project-Client", 
+  "script": "frappe.ui.form.on(\"Project\", \"refresh\", function(doc) {\n\tif(!doc.__islocal) {\n\t\tcur_frm.add_custom_button(__(\"Pull Github Issue\"), function() {\n\t\t\n\t\t});\n\t}\n});\n", 
+  "script_type": "Client"
+ }
+]
