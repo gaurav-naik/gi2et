@@ -24,9 +24,9 @@ def get_gh_issues(gh_url=None):
 					{
 						"subject": issue.get("title"),
 						"status": issue.get("state").title(),
-						"exp_start_date": frappe.utils.data.formatdate(issue.get("created_at")),
+						"exp_start_date": str(dateutil.parser.parse(issue.get("created_at")).date()),
 						"description": issue.get("body"),
-						"closing_date": frappe.utils.data.formatdate(issue.get("closed_at")),
+						"closing_date": str(dateutil.parser.parse(issue.get("closed_at")).date()) if issue.get("closed_at") else "",
 						"github_id": issue.get("id"),
 						"github_number": issue.get("number")
 					})
