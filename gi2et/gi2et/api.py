@@ -63,9 +63,6 @@ def add_update_task(project=None, task=None):
 				update_task.save(ignore_permissions = True)	
 				frappe.db.commit()
 				generation_status = _("SUCCESS : Updated Tasks")
-	# elif len(task_list) == 0:
-	# 	create_new_task(project, task)
-	# 	generation_status = _("SUCCESS : Created Tasks")
 
 	if str(task["github_id"]) not in gh_id_list:
 		create_new_task(project, task)
