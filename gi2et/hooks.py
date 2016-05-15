@@ -11,7 +11,7 @@ app_email = "support@castlecraft.in"
 app_version = "0.0.1"
 app_license = "GPL v3"
 
-fixtures = ["Custom Field", "Custom Script"]
+fixtures = ["Custom Field"]
 
 # Includes in <head>
 # ------------------
@@ -73,11 +73,9 @@ fixtures = ["Custom Field", "Custom Script"]
 # Hook on document methods and events
 
 # doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-#	}
+# 	"Project": {
+# 		"after_insert": "gi2et.gi2et.api.gi2et_project_after_insert"
+# 	}
 # }
 
 # Scheduled Tasks
