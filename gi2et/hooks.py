@@ -8,7 +8,7 @@ app_description = "Pull Github Issues into Project Tasks"
 app_icon = "octicon octicon-mark-github"
 app_color = "#87cefa"
 app_email = "support@castlecraft.in"
-app_version = "0.0.1"
+app_version = "1.0.0"
 app_license = "GPL v3"
 
 fixtures = ["Custom Field"]
