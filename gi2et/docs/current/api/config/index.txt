@@ -1,0 +1,4 @@
+gi2et.config.desktop
+gi2et.config
+gi2et.config.gi2et
+gi2et.config.docs
