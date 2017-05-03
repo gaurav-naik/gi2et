@@ -51,11 +51,11 @@ def add_update_task(project=None, task=None):
 			if t.get("github_id") == str(task["github_id"]):
 				update_task = frappe.get_doc("Task", t.get("name"))
 				update_task.update({
-					"subject": task["subject"],
-					"status": task["status"],
-					"exp_start_date": task["exp_start_date"],
-					"exp_end_date": task["exp_end_date"],
-					"description": task["description"],
+					"subject": task["subject"].decode('utf-8'),
+					"status": task["status"].decode('utf-8'),
+					"exp_start_date": task["exp_start_date"].decode('utf-8'),
+					"exp_end_date": task["exp_end_date"].decode('utf-8'),
+					"description": task["description"].decode('utf-8'),
 				})
 				update_task.flags.ignore_links = True
 				update_task.flags.from_project = True
