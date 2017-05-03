@@ -75,13 +75,13 @@ def create_new_task(project, task):
 		new_task.project = project
 
 		new_task.update({
-			"subject": task["subject"],
-			"status": task["status"],
-			"exp_start_date": task["exp_start_date"],
-			"exp_end_date": task["exp_end_date"],
-			"description": task["description"],
-			"github_id": task["github_id"],
-			"github_number": task["github_number"]
+			"subject": task["subject"].decode('utf-8'),
+			"status": task["status"].decode('utf-8'),
+			"exp_start_date": task["exp_start_date"].decode('utf-8'),
+			"exp_end_date": task["exp_end_date"].decode('utf-8'),
+			"description": task["description"].decode('utf-8'),
+			"github_id": str(task["github_id"]).decode('utf-8'),
+			"github_number": str(task["github_number"]).decode('utf-8')
 		})
 
 		new_task.flags.ignore_links = True
